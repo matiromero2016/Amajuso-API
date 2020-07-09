@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+
+        #loader {
+            margin: 0 auto;
+            border: 3px solid transparent;
+            border-radius: 50%;
+            border-top: 3px solid #fff;
+            width: 30px;
+            height: 30px;
+            -webkit-animation: spin 750ms linear infinite; /* Safari */
+            animation: spin 750ms linear infinite;
+        }
+        /* Safari */
+        @@-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @@keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="fb-root"></div>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0&appId=660953594760795&autoLogAppEvents=1" nonce="DCn7xpuw"></script>
+    <div class="fb-page" data-href="https://www.facebook.com/amajusomdp" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/amajusomdp" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/amajusomdp">Amajuso Mar del Plata</a></blockquote></div>
+    
+    @*<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>*@
+</body>
+</html>

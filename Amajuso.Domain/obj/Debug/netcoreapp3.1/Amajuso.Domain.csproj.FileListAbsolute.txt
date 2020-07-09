@@ -1,0 +1,9 @@
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\bin\Debug\netcoreapp3.1\Amajuso.Domain.deps.json
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\bin\Debug\netcoreapp3.1\Amajuso.Domain.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\bin\Debug\netcoreapp3.1\Amajuso.Domain.pdb
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\obj\Debug\netcoreapp3.1\Amajuso.Domain.csproj.CoreCompileInputs.cache
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\obj\Debug\netcoreapp3.1\Amajuso.Domain.AssemblyInfoInputs.cache
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\obj\Debug\netcoreapp3.1\Amajuso.Domain.AssemblyInfo.cs
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\obj\Debug\netcoreapp3.1\Amajuso.Domain.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\obj\Debug\netcoreapp3.1\Amajuso.Domain.pdb
+C:\Users\matir\dev\amajuso-api\Amajuso.Domain\obj\Debug\netcoreapp3.1\Amajuso.Domain.csprojAssemblyReference.cache

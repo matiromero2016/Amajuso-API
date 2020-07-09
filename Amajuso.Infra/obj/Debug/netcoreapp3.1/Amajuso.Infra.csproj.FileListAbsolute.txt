@@ -1,0 +1,15 @@
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\bin\Debug\netcoreapp3.1\Amajuso.Infra.deps.json
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\bin\Debug\netcoreapp3.1\Amajuso.Infra.runtimeconfig.json
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\bin\Debug\netcoreapp3.1\Amajuso.Infra.runtimeconfig.dev.json
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\bin\Debug\netcoreapp3.1\Amajuso.Infra.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\bin\Debug\netcoreapp3.1\Amajuso.Infra.pdb
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\bin\Debug\netcoreapp3.1\Amajuso.Domain.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\bin\Debug\netcoreapp3.1\Amajuso.Domain.pdb
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\obj\Debug\netcoreapp3.1\Amajuso.Infra.csprojAssemblyReference.cache
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\obj\Debug\netcoreapp3.1\Amajuso.Infra.csproj.CoreCompileInputs.cache
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\obj\Debug\netcoreapp3.1\Amajuso.Infra.AssemblyInfoInputs.cache
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\obj\Debug\netcoreapp3.1\Amajuso.Infra.AssemblyInfo.cs
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\obj\Debug\netcoreapp3.1\Amajuso.Infra.csproj.CopyComplete
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\obj\Debug\netcoreapp3.1\Amajuso.Infra.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\obj\Debug\netcoreapp3.1\Amajuso.Infra.pdb
+C:\Users\matir\dev\amajuso-api\Amajuso.Infra\obj\Debug\netcoreapp3.1\Amajuso.Infra.genruntimeconfig.cache

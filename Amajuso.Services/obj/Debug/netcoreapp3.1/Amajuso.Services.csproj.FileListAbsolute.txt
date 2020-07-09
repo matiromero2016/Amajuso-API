@@ -1,0 +1,12 @@
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\bin\Debug\netcoreapp3.1\Amajuso.Services.deps.json
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\bin\Debug\netcoreapp3.1\Amajuso.Services.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\bin\Debug\netcoreapp3.1\Amajuso.Services.pdb
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\bin\Debug\netcoreapp3.1\Amajuso.Domain.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\bin\Debug\netcoreapp3.1\Amajuso.Domain.pdb
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\obj\Debug\netcoreapp3.1\Amajuso.Services.csprojAssemblyReference.cache
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\obj\Debug\netcoreapp3.1\Amajuso.Services.csproj.CoreCompileInputs.cache
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\obj\Debug\netcoreapp3.1\Amajuso.Services.AssemblyInfoInputs.cache
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\obj\Debug\netcoreapp3.1\Amajuso.Services.AssemblyInfo.cs
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\obj\Debug\netcoreapp3.1\Amajuso.Services.csproj.CopyComplete
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\obj\Debug\netcoreapp3.1\Amajuso.Services.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.Services\obj\Debug\netcoreapp3.1\Amajuso.Services.pdb

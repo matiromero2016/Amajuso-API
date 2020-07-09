@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+
+        #loader {
+            margin: 0 auto;
+            border: 3px solid transparent;
+            border-radius: 50%;
+            border-top: 3px solid #fff;
+            width: 30px;
+            height: 30px;
+            -webkit-animation: spin 750ms linear infinite; /* Safari */
+            animation: spin 750ms linear infinite;
+        }
+        /* Safari */
+        @@-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @@keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a class="twitter-timeline" data-tweet-limit="10" data-chrome="noscrollbar nofooter" href="https://twitter.com/AMAJUSOMDP?ref_src=twsrc%5Etfw">
+        <div id="loader"></div>
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
