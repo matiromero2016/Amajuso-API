@@ -156,3 +156,4 @@ C:\Users\matir\dev\amajuso-api\amajuso.API\bin\Debug\netcoreapp3.1\Microsoft.Ext
 C:\Users\matir\dev\amajuso-api\amajuso.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\matir\dev\amajuso-api\amajuso.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\matir\dev\amajuso-api\amajuso.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\matir\dev\amajuso-api\Amajuso.API\obj\Debug\netcoreapp3.1\Amajuso.API.MvcApplicationPartsAssemblyInfo.cs

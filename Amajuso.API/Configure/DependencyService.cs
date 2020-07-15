@@ -16,6 +16,7 @@ namespace Amajuso.API.Configure
         public static IServiceCollection AddCustomDependency(this IServiceCollection services, IConfiguration configuration){ 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped(typeof(IService<User>), typeof(UserService));
+            services.AddScoped(typeof(IYoutubeService<Youtube>), typeof(YoutubeService));
             services.AddScoped(typeof(ArticleService), typeof(ArticleService));
             //services.AddScoped(typeof(IService<ArticleCategories>), typeof(BaseService<ArticleCategories>));
             //services.AddScoped(typeof(IService<ArticleCategories>), typeof(ArticleCategoriesService));

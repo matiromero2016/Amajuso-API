@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Amajuso.API.Configure;
+using Amajuso.API.Services;
 using Amajuso.Infra.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,6 +36,8 @@ namespace Amajuso.API
             services.AddCustomCors();
             services.AddCustomDependency(Configuration);
             services.AddCustomAuthentication(Configuration);
+            services.AddHttpClient();
+            services.AddHostedService<YoutubeServiceBackground>();
 
             services.AddMvc(b =>
             {

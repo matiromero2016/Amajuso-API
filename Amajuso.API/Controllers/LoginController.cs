@@ -30,22 +30,17 @@ namespace Amajuso.API.Controllers
         public async Task<ActionResult> Post([FromBody] LoginDTO obj)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
+            
             try
             {
                 var user = _loginService.ValidCredentials(obj.UserID, obj.AccessKey, obj.GrantType);
 
                 if (user == null)
-                {
                     return Unauthorized();
-                }
-
-                Token token = _tokenService.GenerateToken(user);
                 
+                Token token = _tokenService.GenerateToken(user);
                 return Ok(token);
-           
             }
             catch(ArgumentException e)
             {
