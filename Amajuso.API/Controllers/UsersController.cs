@@ -20,6 +20,22 @@ namespace Amajuso.API.Controllers {
         }
 
         [HttpGet]
+        [Authorize]
+        [Produces("application/json")]
+        public async Task<IActionResult> Get()
+        {
+            try
+            {
+                var obj = await _userService.Get(long.Parse(HttpContext.User.Identity.Name));
+                UserDTO user = new UserDTO(obj);
+                return new ObjectResult(user);
+            }
+            catch(ArgumentException ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex);
+            }
+        }
+        [HttpGet]
         [Produces("application/json")]
         [Route("{id}")]
         public async Task<IActionResult> Get(long id)

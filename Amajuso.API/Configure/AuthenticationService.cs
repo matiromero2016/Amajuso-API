@@ -43,7 +43,14 @@ namespace Amajuso.API.Configure
                  };
              });
 
-             var youtubeCredentials = new YoutubeCredentials();
+            services.AddAuthorization(auth =>
+            {
+                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                    .RequireAuthenticatedUser().Build());
+            });
+
+            var youtubeCredentials = new YoutubeCredentials();
                 new ConfigureFromConfigurationOptions<YoutubeCredentials>(
                 configuration.GetSection("YoutubeCredentials"))
                 .Configure(youtubeCredentials);

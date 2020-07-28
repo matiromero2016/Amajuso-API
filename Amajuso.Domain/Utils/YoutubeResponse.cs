@@ -38,10 +38,14 @@ namespace Amajuso.Domain.Utils
         public string channelTitle { get; set; }
         public DateTime publishTime { get; set; }
     }
+        public class Id
+        {
+        public string videoId { get; set; }
+        }
 
         public class Item
         {
-        public string videoId { get; set; }
+        public Id id { get; set; }
         public Snippet snippet { get; set; }
         }
 

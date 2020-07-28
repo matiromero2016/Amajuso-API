@@ -3,6 +3,7 @@ using Amajuso.API.Filters;
 using Amajuso.Domain.Entities;
 using Amajuso.Domain.Interfaces;
 using Amajuso.Domain.Paged;
+using Amajuso.Domain.Utils;
 using Amajuso.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;
@@ -77,7 +78,7 @@ namespace Amajuso.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Authorize]
+        [Authorize("Bearer", Roles = Role.Administrator)]
         [Produces("application/json")]
         // [ProducesResponseType(201, Type = typeof(AccountDTO))]
         // [ProducesResponseType(400, Type = typeof(ReturnMessage))]

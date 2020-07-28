@@ -6,19 +6,22 @@ using Amajuso.Domain.Entities;
 using Amajuso.Domain.Interfaces;
 using Amajuso.Domain.Paged;
 using Amajuso.Service;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Amajuso.Services {
 
     public class LoginService {
 
         private IService<User> _userService;
-        public LoginService(IService<User> userService) {
+        private IService<BlackList> _blackListService;
+        public LoginService(IService<User> userService, [FromServices] IService<BlackList> blackListService) {
             _userService = userService;
+            _blackListService = blackListService;
         }
     
         public User ValidCredentials(string userID, string accessKey, string grantType)
         {
-            User userBase = null;
+            User user = null;
 
             switch (grantType)
             {
@@ -29,22 +32,22 @@ namespace Amajuso.Services {
                     // userBase = VerifyFacebook(accessKey);
                     break;
                 case "refresh_token":
-                    // userBase = VerifyRefresh(accessKey);
+                    user = VerifyRefresh(accessKey);
                     break;
                 case "password":
-                    userBase = VerifyPassword(userID, accessKey);
+                    user = VerifyPassword(userID, accessKey);
                     break;
             }
 
-            return userBase;
+            return user;
         }
 
         /// <summary>
-        /// Realiza la autenticación atráves de Email y Password
+        /// Realiza la autenticación a tráves de Email y Password
         /// </summary>
-        /// <param name="userID">E-mail do usuário</param>
-        /// <param name="accessKey">Chave de acesso do tipo Password</param>
-        /// <returns>Usuário caso exista</returns>
+        /// <param name="userID">E-mail del usuario</param>
+        /// <param name="accessKey">Llave de accesso de tipo Password</param>
+        /// <returns>Usuario caso exista</returns>
         private User VerifyPassword(string email, string accessKey)
         {
             User userBase = null;
@@ -54,6 +57,36 @@ namespace Amajuso.Services {
                 userBase = null;
 
             return userBase;
+        }
+
+        /// <summary>
+        /// Realiza la autenticación a tráves del refresh token
+        /// </summary>
+        /// <param name="userID">E-mail del usuario</param>
+        /// <param name="accessKey">Llave de accesso de tipo Refresh Token</param>
+        /// <returns>Usuario caso exista</returns>
+        public User VerifyRefresh(string accessKey)
+        {
+            User user = null;
+            if (!string.IsNullOrWhiteSpace(accessKey))
+            {
+                var existRefresh = _blackListService.Exist(x => x.RefreshToken == accessKey).Result;
+                if (existRefresh)
+                    return user;
+               
+                accessKey = CryptographyService.Decrypt(accessKey);
+
+                string[] parts = accessKey.Split('#');
+                if (parts.Length == 2)
+                {
+                    DateTime end = new DateTime(Convert.ToInt64(parts[1]));
+                    if (DateTime.UtcNow <= end)
+                    {
+                        user = _userService.Get(Convert.ToInt64(parts[0])).Result;
+                    }
+                }
+            }
+            return user;
         }
     }
 }

@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SP.Metro.API.Middlewares;
 
 namespace Amajuso.API
 {
@@ -29,6 +30,7 @@ namespace Amajuso.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<GlobalExceptionHandlerMiddleware>();
             services.AddControllers();
             // services.AddDbContext<DefaultContext>(opt => opt.UseInMemoryDatabase("Database"));
             services.AddDbContext<DefaultContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString")), ServiceLifetime.Scoped);

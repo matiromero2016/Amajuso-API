@@ -10,6 +10,7 @@ namespace Amajuso.Infra.Context {
         public DbSet<ArticleCategories> ArticleCategories { get; set; }
         public DbSet<ArticleFavorite> ArticleFavorite { get; set; }
         public DbSet<CategoryFavorite> CategoryFavorite { get; set; }
+        public DbSet<Youtube> Youtube { get; set; }
 
         public DefaultContext(DbContextOptions<DefaultContext> options ) : base(options)
         { }
@@ -21,6 +22,7 @@ namespace Amajuso.Infra.Context {
             modelBuilder.Entity<ArticleCategories>(new ArticleCategoriesMap<ArticleCategories>().Configure);
             modelBuilder.Entity<ArticleFavorite>(new BaseMap<ArticleFavorite>().Configure);
             modelBuilder.Entity<CategoryFavorite>(new BaseMap<CategoryFavorite>().Configure);
+            modelBuilder.Entity<Youtube>(new BaseMap<Youtube>().Configure);
 
         }
         

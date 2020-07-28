@@ -42,14 +42,15 @@ namespace Amajuso.API.Services
                     var listVideos = await scoped.GetLastVideos();
                     foreach (var item in listVideos)
                     {
-                        var video = scoped.Get(item.YoutubeId);
-                        if (video != null)
+                        var video = await scoped.Get(item.YoutubeId);
+                        if (video == null)
                             await scoped.Post(item);
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                var exc = ex.Message;
             }
         }
         public override void Dispose()

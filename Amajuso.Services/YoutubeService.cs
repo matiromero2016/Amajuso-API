@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,9 +27,18 @@ namespace Amajuso.Services
             _youtubeCredentials = youtubeCredentials;
         }
 
-        public Task<Youtube> Get(string youtubeId)
+        public async Task<Youtube> Get(long value)
         {
-            throw new NotImplementedException();
+            return await _repository.SelectAsync(value);
+        }
+
+        public async Task<Youtube> Get(string youtubeId)
+        {
+            Youtube video;
+            var videos = await _repository.SelectAsync(x => x.YoutubeId == youtubeId, 1, 10);
+            video = videos.FirstOrDefault();
+            return video;
+
         }
 
         public async Task<IEnumerable<Youtube>> GetLastVideos()
@@ -45,7 +55,7 @@ namespace Amajuso.Services
                 {
                     objJson = JsonConvert.DeserializeObject<YoutubeResponse>(response.Content.ReadAsStringAsync().Result);
                     foreach (var item in objJson.items)
-                        listVideos.Add(new Youtube(item.videoId, item.snippet.title, item.snippet.description, item.snippet.thumbnails.Default.url, item.snippet.publishedAt));
+                        listVideos.Add(new Youtube(item.id.videoId, item.snippet.title, item.snippet.description, item.snippet.thumbnails.Default.url, item.snippet.publishedAt));
                 }
                 else
                 {
@@ -54,9 +64,9 @@ namespace Amajuso.Services
             return listVideos;
         }
 
-        public Task<Youtube> Post(Youtube obj)
+        public async Task<Youtube> Post(Youtube obj)
         {
-            throw new NotImplementedException();
+            return await _repository.InsertAsync(obj);
         }
 
         public async Task<PagedCollection<Youtube>> Where(Expression<Func<Youtube, bool>> expression, int page = 1, int pageSize = 10)

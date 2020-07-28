@@ -23,6 +23,7 @@ namespace Amajuso.API.Configure
             services.AddScoped(typeof(ArticleCategoriesService), typeof(ArticleCategoriesService));
             services.AddTransient(typeof(LoginService), typeof(LoginService));
             services.AddTransient(typeof(TokenService));
+            services.AddTransient(typeof(IService<BlackList>), typeof(BlackListService));
             return services;
         }
 
